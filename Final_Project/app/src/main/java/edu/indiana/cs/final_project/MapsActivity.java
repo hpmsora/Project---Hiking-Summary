@@ -42,7 +42,6 @@ public class MapsActivity extends FragmentActivity
         SensorEventListener {
 
     GoogleMap mMap;
-    TextView mText;
     SupportMapFragment mapFragment;
 
     Location currLocation;
@@ -61,9 +60,7 @@ public class MapsActivity extends FragmentActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-
         setContentView(R.layout.activity_maps);
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
@@ -71,7 +68,6 @@ public class MapsActivity extends FragmentActivity
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        mText = (TextView) findViewById(R.id.textViewForLngLat);
         getLoc = (Button) findViewById(R.id.btn_ToDoList);
 
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
@@ -125,8 +121,6 @@ public class MapsActivity extends FragmentActivity
         mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
             @Override
             public void onMapClick(LatLng latLng) {
-                mText.setText("Lat: " + String.valueOf(latLng.latitude) + " Lng: " + String.valueOf(latLng.longitude));
-
                 String data = latLng.latitude + "," + latLng.longitude;
 
                 SharedPreferences savingLocation = getSharedPreferences("savedLocation", MODE_PRIVATE);
@@ -152,8 +146,6 @@ public class MapsActivity extends FragmentActivity
 
         saveCurrentViewEditor.putString("Current", marker.getSnippet());
         saveCurrentViewEditor.commit();
-
-        mText.setText(marker.getSnippet());
 
         startActivity(new Intent(this, TaskDetailActivity.class));
         return true;

@@ -37,18 +37,6 @@
         android:id="@+id/btn_HikeSummary"
         android:onClick="btnHikeSummary"/>
 
-    <TextView
-        android:text="LOCATION"
-        android:textAlignment="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/map"
-        android:id="@+id/textViewForLngLat"
-        android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/btn_ToDoList"
-        android:layout_toRightOf="@+id/btn_HikeSummary"
-        android:layout_toEndOf="@+id/btn_HikeSummary" />
-
     <Button
         android:text="To-Do"
         android:layout_width="wrap_content"
