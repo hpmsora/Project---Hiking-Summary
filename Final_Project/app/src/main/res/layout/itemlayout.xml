@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:columnCount="2"
+    android:rowCount="2"
+    android:id="@+id/itemLayout"
+    android:onClick="showingDetail">
+
+    <TextView
+        android:text="TITLE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:id="@+id/textView_Title"
+        android:layout_weight="1"
+        android:layout_row="0"
+        android:layout_column="0" />
+
+    <TextView
+        android:text="TEMPERATURE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:id="@+id/textView_Temperature"
+        android:layout_row="0"
+        android:layout_column="1" />
+
+    <TextView
+        android:text="Location"
+        android:textAlignment="center"
+        android:textSize="11dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_LocationItemLayout"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        tools:text="LOCATION" />
+
+</GridLayout>

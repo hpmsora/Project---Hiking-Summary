@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_task_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.indiana.cs.final_project.TaskDetailActivity">
+
+    <TextView
+        android:text="Task Detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView_TitleTaskDetail"
+        tools:text="Task Detail" />
+
+    <TextView
+        android:text="Title : "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/textView_TitleContentsTaskView"
+        tools:text="Title : "
+        android:layout_below="@+id/textView_TitleTaskDetail"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/editText_TitleField"
+        android:layout_toLeftOf="@+id/editText_TitleField" />
+
+    <TextView
+        android:text="Description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:layout_below="@+id/textView_TitleContentsTaskView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="37dp"
+        android:id="@+id/textView_Description"
+        android:layout_toLeftOf="@+id/editText_DescriptionField"
+        android:layout_toStartOf="@+id/editText_DescriptionField" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_alignTop="@+id/textView_Description"
+        android:layout_toRightOf="@+id/textView_TitleContentsTaskView"
+        android:layout_toEndOf="@+id/textView_TitleContentsTaskView"
+        android:id="@+id/editText_DescriptionField" />
+
+    <TextView
+        android:text="LOCATION"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="11dp"
+        android:textAlignment="center"
+        android:id="@+id/textView_LanLng"
+        tools:text="LOCATION"
+        android:layout_above="@+id/btn_BackTaskDetail"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="BacK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_BackTaskDetail"
+        tools:text="Back"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="btnBackTaskDetail" />
+
+    <Button
+        android:text="Save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btn_DeleteTaskDetail"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/btn_SaveTaskDetail"
+        tools:text="Save"
+        android:onClick="btnSaveTaskDetail" />
+
+    <Button
+        android:text="Delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_DeleteTaskDetail"
+        tools:text="Delete"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="btnDeleteTaskDetail" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:textSize="18dp"
+        android:id="@+id/editText_TitleField"
+        android:selectAllOnFocus="true"
+        android:layout_alignTop="@+id/textView_TitleContentsTaskView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="TEMPERATURE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="11dp"
+        android:layout_above="@+id/textView_LanLng"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView_TemperatureNow" />
+
+</RelativeLayout>
